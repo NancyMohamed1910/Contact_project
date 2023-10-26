@@ -64,6 +64,7 @@ class ContactEditPage extends StatelessWidget {
                               flex: 1,
                               child: TextFormField(
                                 decoration: const InputDecoration(
+                                  prefixIcon: Icon(Icons.person),
                                   hintText: 'First name',
                                   //errorText: 'please enter first name',
                                   alignLabelWithHint: true,
@@ -87,13 +88,12 @@ class ContactEditPage extends StatelessWidget {
                                 },
                               ),
                             ),
-                            const SizedBox(
-                              height: 5,
-                            ),
+
                             Expanded(
                               flex: 1,
                               child: TextFormField(
                                 decoration: const InputDecoration(
+                                  prefixIcon: Icon(Icons.person),
                                   hintText: 'Last name',
                                   alignLabelWithHint: true,
                                   hintStyle:
@@ -116,13 +116,12 @@ class ContactEditPage extends StatelessWidget {
                                 },
                               ),
                             ),
-                            const SizedBox(
-                              height: 5,
-                            ),
+
                             Expanded(
                               flex: 1,
                               child: TextFormField(
                                 decoration: const InputDecoration(
+                                  prefixIcon: Icon(Icons.phone),
                                   hintText: 'Phone',
                                   alignLabelWithHint: true,
                                   hintStyle:
@@ -145,13 +144,12 @@ class ContactEditPage extends StatelessWidget {
                                 },
                               ),
                             ),
-                            const SizedBox(
-                              height: 5,
-                            ),
+
                             Expanded(
                               flex: 1,
                               child: TextFormField(
                                 decoration: const InputDecoration(
+                                  prefixIcon: Icon(Icons.email),
                                   hintText: 'Email',
                                   alignLabelWithHint: true,
                                   hintStyle:
@@ -174,13 +172,12 @@ class ContactEditPage extends StatelessWidget {
                                 },
                               ),
                             ),
-                            const SizedBox(
-                              height: 5,
-                            ),
+
                             Expanded(
                               flex: 1,
                               child: TextFormField(
                                 decoration: const InputDecoration(
+                                  prefixIcon: Icon(Icons.web_rounded),
                                   hintText: 'WebSite',
                                   alignLabelWithHint: true,
                                   hintStyle:
