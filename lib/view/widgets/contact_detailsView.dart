@@ -5,6 +5,8 @@ import 'package:contact_project/view/widgets/alert.dart';
 import 'package:contact_project/view_model/view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter_textfield_validation/flutter_textfield_validation.dart';
+
 
 
 
@@ -51,6 +53,10 @@ class _ContactDetailsState extends State<ContactDetails> {
                   textCapitalization: TextCapitalization.words,
                   controller: nameController1,
                   style: const TextStyle(fontWeight: FontWeight.w500),
+                  autovalidateMode: AutovalidateMode.onUserInteraction,
+                  validator: (input) => input!.validateName()
+                      ? null
+                      : "Please enter valid name!!",
                   onFieldSubmitted: (value) {
                     if (nameController1.text.isNotEmpty) {
                       nameController1.clear();
@@ -76,6 +82,10 @@ class _ContactDetailsState extends State<ContactDetails> {
                   textCapitalization: TextCapitalization.words,
                   controller: nameController2,
                   style: const TextStyle(fontWeight: FontWeight.w500),
+                  autovalidateMode: AutovalidateMode.onUserInteraction,
+                  validator: (input) => input!.validateName()
+                      ? null
+                      : "Please enter valid name!!",
                   onFieldSubmitted: (value) {
                     if (nameController2.text.isNotEmpty) {
                       nameController2.clear();
@@ -101,6 +111,10 @@ class _ContactDetailsState extends State<ContactDetails> {
                   textCapitalization: TextCapitalization.none,
                   controller: phoneController,
                   style: const TextStyle(fontWeight: FontWeight.w500),
+                  autovalidateMode: AutovalidateMode.onUserInteraction,
+                  validator: (input) => input!.validatePhone()
+                      ? null
+                      : "Please enter valid phone number!!",
                   onFieldSubmitted: (value) {
                     if (phoneController.text.isNotEmpty) {
                       phoneController.clear();
@@ -126,6 +140,10 @@ class _ContactDetailsState extends State<ContactDetails> {
                   textCapitalization: TextCapitalization.none,
                   controller: mailController4,
                   style: const TextStyle(fontWeight: FontWeight.w500),
+                  autovalidateMode: AutovalidateMode.onUserInteraction,
+                  validator: (input) => input!.validateEmail()
+                      ? null
+                      : "Please enter valid email!!",
                   onFieldSubmitted: (value) {
                     if (mailController4.text.isNotEmpty) {
                       mailController4.clear();

@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:contact_project/view/home_page.dart';
 import 'package:contact_project/view/contact_page.dart';
 import 'package:contact_project/view/widgets/alert.dart';
+import 'package:flutter_textfield_validation/flutter_textfield_validation.dart';
 
 class ContactEditPage extends StatelessWidget {
   ContactData editData;
@@ -80,6 +81,10 @@ class ContactEditPage extends StatelessWidget {
                                 controller: nameController1,
                                 style: const TextStyle(
                                     fontWeight: FontWeight.w500),
+                                autovalidateMode: AutovalidateMode.onUserInteraction,
+                                validator: (input) => input!.validateName()
+                                    ? null
+                                    : "Please enter valid name!!",
                                 onFieldSubmitted: (value) {
                                   if (nameController1.text.isNotEmpty) {
                                     nameController1.clear();
@@ -108,6 +113,10 @@ class ContactEditPage extends StatelessWidget {
                                 controller: nameController2,
                                 style: const TextStyle(
                                     fontWeight: FontWeight.w500),
+                                autovalidateMode: AutovalidateMode.onUserInteraction,
+                                validator: (input) => input!.validateName()
+                                    ? null
+                                    : "Please enter valid name!!",
                                 onFieldSubmitted: (value) {
                                   if (nameController2.text.isNotEmpty) {
                                     nameController2.clear();
@@ -136,6 +145,10 @@ class ContactEditPage extends StatelessWidget {
                                 controller: phoneController,
                                 style: const TextStyle(
                                     fontWeight: FontWeight.w500),
+                                autovalidateMode: AutovalidateMode.onUserInteraction,
+                                validator: (input) => input!.validatePhone()
+                                    ? null
+                                    : "Please enter valid phone number!!",
                                 onFieldSubmitted: (value) {
                                   if (phoneController.text.isNotEmpty) {
                                     phoneController.clear();
@@ -164,6 +177,10 @@ class ContactEditPage extends StatelessWidget {
                                 controller: mailController,
                                 style: const TextStyle(
                                     fontWeight: FontWeight.w500),
+                                autovalidateMode: AutovalidateMode.onUserInteraction,
+                                validator: (input) => input!.validateEmail()
+                                    ? null
+                                    : "Please enter valid email!!",
                                 onFieldSubmitted: (value) {
                                   if (mailController.text.isNotEmpty) {
                                     mailController.clear();
